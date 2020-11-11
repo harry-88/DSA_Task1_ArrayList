@@ -37,7 +37,7 @@ public class ArrayBaseList {
         this.noOfElement = noOfElement;
     }
 
-    public void insertAtEnd(int value)
+    public void insertAtEnd(int value)//the purpose of this method is to add data at the end of the array
     {
         if (noOfElement == arrayList.length)
         {
@@ -51,7 +51,7 @@ public class ArrayBaseList {
         noOfElement++;
     }
 
-    public void insertAtIndex(int value,int index)
+    public void insertAtIndex(int value,int index)//the purpose of this method is to insert the data at the required index
     {
         if (index < 0 || index > noOfElement)
             throw new IllegalAccessError("you entered an illegal index");
@@ -75,9 +75,9 @@ public class ArrayBaseList {
     public void removeFromEnd()
     {
         noOfElement--;
-    }
+    }//the purpose of this method is to remove the last data
 
-    public void removeFromIndex(int index)
+    public void removeFromIndex(int index)//the purpose of this method is to remove the data from required index
     {
         if (index < 0 || index > noOfElement)
             throw new IllegalAccessError("you entered an illegal index");
@@ -90,13 +90,13 @@ public class ArrayBaseList {
 
         }
     }
-    public void print()
+    public void print()//the purpose of this method is to print the data of the array
     {
         System.out.println("arrays data are :");
         for (int i = 0;i<noOfElement;i++)
             System.out.println(arrayList[i]);
     }
-    public int linearSearch(int value)
+    public int linearSearch(int value)//the purpose of this method is to search the data by linear search
     {
         for (int i = 0;i<noOfElement;i++)
             if (arrayList[i] == value)
@@ -105,7 +105,7 @@ public class ArrayBaseList {
             return -1;
     }
 
-    public int binarySearch(int value)
+    public int binarySearch(int value)//the purpose of this method is to search the data by binary search
     {
         int left = 0;
         int right = noOfElement;
@@ -131,7 +131,7 @@ public class ArrayBaseList {
         return -1;
     }
 
-    public void removeDuplicate()
+    public void removeDuplicate()//the purpose of this method is to remove the duplicate data
     {
         for (int outter  = 0; outter < noOfElement;outter++)
         {
@@ -149,14 +149,14 @@ public class ArrayBaseList {
         }
     }
 
-    public void copyList(int arr[],int size)
+    public void copyList(int arr[],int size)//the purpose of this method is to copy the  array at the end of the same array
     {
         if (size>= 0)
             for (int i = 0;i<size;i++)
                 insertAtEnd(arr[i]);
     }
 
-    public void mergeTwoLists(int arr[],int size)
+    public void mergeTwoLists(int arr[],int size)// the purpose of this method is to merge the array of the arrayList.
     {
         int len = arrayList.length;
         if (size < 0 || size > (len-noOfElement)) {
@@ -197,10 +197,10 @@ public class ArrayBaseList {
         ArrayBaseList arrayBaseList = new ArrayBaseList();
 
         int i[] = {23,36,2,0,12,34};
-        arrayBaseList.copyList(i,i.length);
-        arrayBaseList.print();
-        arrayBaseList.addMultipleElement();
-        arrayBaseList.print();
+        arrayBaseList.copyList(i,i.length);//this statement store the copy of the data in the array of arrayBaseList
+        arrayBaseList.print();//it display all the element of the array
+        arrayBaseList.addMultipleElement();//it take the data from the user as the user need
+        arrayBaseList.print();// it display the array after adding same new data members
     }
 
 
